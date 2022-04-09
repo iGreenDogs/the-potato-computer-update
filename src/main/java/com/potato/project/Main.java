@@ -1,21 +1,30 @@
-package net.fabricmc.example;
+package com.potato.project;
 
+import com.potato.project.biomes.MangroveSwamp;
 import net.fabricmc.api.ModInitializer;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import net.fabricmc.fabric.api.biome.v1.OverworldBiomes;
+import net.fabricmc.fabric.api.biome.v1.OverworldClimate;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.BuiltinRegistries;
+import net.minecraft.util.registry.Registry;
+import com.potato.project.blocks.*;
+import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.biome.Biome;
 
-public class ExampleMod implements ModInitializer {
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LogManager.getLogger("modid");
+public class Main implements ModInitializer {
+
+	public static final RegistryKey<Biome> MANGROVE_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier("potato", "mangrove"));
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
-		LOGGER.info("Hello Fabric world!");
+		Registry.register(Registry.BLOCK, new Identifier("potato", "mud"), Mud.MUD_BLOCK);
+        Registry.register(Registry.ITEM, new Identifier("potato", "mud"), new BlockItem(Mud.MUD_BLOCK, new FabricItemSettings().group(ItemGroup.MISC)));
+		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new Identifier("tutorial", "obsidian"), MangroveSwamp.OBSIDIAN_SURFACE_BUILDER);
+		Registry.register(BuiltinRegistries.BIOME, MANGROVE_KEY.getValue(), MangroveSwamp.Mangrove);
+		OverworldBiomes.addContinentalBiome(MANGROVE_KEY, OverworldClimate.TEMPERATE, 2D);
+		OverworldBiomes.addContinentalBiome(MANGROVE_KEY, OverworldClimate.COOL, 2D);
 	}
 }
