@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_left",
+  "textures": {
+    "top": "potato:block/mangrove_door_top",
+    "bottom": "potato:block/mangrove_door_bottom"
+  }
+}

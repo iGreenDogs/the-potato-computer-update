@@ -1,0 +1,6 @@
+{
+  "parent": "potato:item/generated",
+  "textures": {
+    "layer0": "potato:item/mangrove_door"
+  }
+}

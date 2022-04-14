@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "potato:block/mangrove_leaves"
+  }
+}
