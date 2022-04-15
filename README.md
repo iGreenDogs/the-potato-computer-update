@@ -1,9 +1,9 @@
-# Fabric Example Mod
+# The Potato Computer Update
 
-## Setup
+## Why This Mod??
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+This Mod is made for players who want to play in new versions of the game, but their computers cant run with the new world hight.
 
-## License
+## Help
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Want to help me make the mod? Join the discord: https://discord.gg/p8GQVxGD5N
