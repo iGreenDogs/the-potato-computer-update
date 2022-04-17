@@ -15,7 +15,7 @@ public class MangroveSwamp {
 
     public static final ConfiguredSurfaceBuilder<TernarySurfaceConfig> OBSIDIAN_SURFACE_BUILDER = SurfaceBuilder.DEFAULT
     .withConfig(new TernarySurfaceConfig(
-            Blocks.DIRT.getDefaultState(),
+            Blocks.GRASS_BLOCK.getDefaultState(),
             Mud.MUD_BLOCK.getDefaultState(),
             Blocks.WATER.getDefaultState()));
 
@@ -42,7 +42,8 @@ public class MangroveSwamp {
     DefaultBiomeFeatures.addDefaultDisks(generationSettings);
     DefaultBiomeFeatures.addSprings(generationSettings);
     DefaultBiomeFeatures.addFrozenTopLayer(generationSettings);
-    DefaultBiomeFeatures.addWaterBiomeOakTrees(generationSettings);
+    DefaultBiomeFeatures.addSwampFeatures(generationSettings);
+    DefaultBiomeFeatures.addSwampVegetation(generationSettings);
 
     return (new Biome.Builder())
       .precipitation(Biome.Precipitation.RAIN)
@@ -52,7 +53,7 @@ public class MangroveSwamp {
       .temperature(0.8F)
       .downfall(0.4F)
       .effects((new BiomeEffects.Builder())
-        .waterColor(0x00ff99)
+        .waterColor(0x00af99)
         .waterFogColor(0x050533)
         .fogColor(0xc0d8ff)
         .skyColor(0x77adff)

@@ -11,5 +11,5 @@ public class Mangrove {
     public static final Block MANGROVE_PLANKS = new Block(FabricBlockSettings.of(Material.WOOD).strength(1.0f));
     public static final Block MANGROVE_ROOTS = new Block(FabricBlockSettings.of(Material.WOOD).strength(1.0f).nonOpaque());
     public static final ModDoorBlock MANGROVE_DOOR = new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(1.0f).nonOpaque());
-    public static final Block MANGROVE_LEAVES = new Block(FabricBlockSettings.of(Material.WOOD).strength(1.0f).ticksRandomly().nonOpaque());
+    public static final Block MANGROVE_LEAVES = new Block(FabricBlockSettings.of(Material.WOOD).strength(1.0f).ticksRandomly().nonOpaque().blockVision((state, world, pos) -> true));
 }
