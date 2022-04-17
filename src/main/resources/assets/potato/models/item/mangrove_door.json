@@ -1,5 +1,5 @@
 {
-  "parent": "potato:item/generated",
+  "parent": "item/generated",
   "textures": {
     "layer0": "potato:item/mangrove_door"
   }

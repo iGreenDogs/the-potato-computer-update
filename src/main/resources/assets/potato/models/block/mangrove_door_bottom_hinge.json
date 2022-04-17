@@ -1,5 +1,5 @@
 {
-  "parent": "block/door_bottom_left_open",
+  "parent": "block/door_bottom_rh",
   "textures": {
     "top": "potato:block/mangrove_door_top",
     "bottom": "potato:block/mangrove_door_bottom"
